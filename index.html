@@ -4,10 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyoto Cafe</title>
-    <link rel="stylesheet" href="scss/main.scss">
+    <link rel="stylesheet" href="dist/css/main.css">
     <script type="module" src="index.js" defer></script>
 </head>
 <body>
-    <h1>Kyoto Cafe</h1>
+    <header>
+        <h1 class="title">Kyoto Cafe</h1>
+        <p class="subtitle">Japanese-inspired beverages and sweets.</p>
+    </header>
+    <main>
+        <section class="menu">
+            <h2 class="menu__title">Menu</h2>
+            <article class="menu-item">
+                <i class="menu-item__icon">🍵</i>
+                <h3 class="menu-item__title">Green Tea Latte</h3>
+                <p class="menu-item__ingredients">Match | Soy Milk | Turbinado Syrup</p>
+                <p class="menu-item__title">$7.95</p>
+                <button class="menu-item__add-btn">+</button>
+                <hr>
+            </article>
+        </section>
+        <section class="checkout">
+            <h2 class="checkout__title">Your Order</h2>
+            <div class="checkout__order-con">
+                <div class="order__item">
+                    <h3 class="order__item-name">Green Tea Latte</h3>
+                    <button class="order__remove-btn">remove</button>
+                    <p class="order__price">$7.95</p>
+                </div>
+                <div class="order__item">
+                    <h3 class="order__item-name">Green Tea Latte</h3>
+                    <button class="order__remove-btn">remove</button>
+                    <p class="order__price">$7.95</p>
+                </div>
+            </div>
+            <hr class="checkout-hr">
+            <div class="checkout-total-con">
+                <p>Total price: </hp>
+                <p>$15.90</p>    
+            </div>
+            <button class="checkout__complete-btn">Complete Order</button>
+        </section>
+    </main>
+    <section class="modal">
+        <h2 class="modal__title">Enter card details</h2>
+        <form action="">
+            <input 
+                type="text" 
+                name="full-name" 
+                id="full-name" 
+                placeholder="Enter your full name" 
+                aria-label="Full name"
+            />
+            <input 
+                type="password" 
+                name="cc-number" 
+                id="cc-number" 
+                placeholder="Enter card number" 
+                aria-label="Credit Card Number"
+            />
+            <input 
+                type="number" 
+                name="cvv-number"
+                id="cvv-number"
+                placeholder="Enter CVV"
+                aria-label="CVV number"
+            />
+            <button class="pay-btn">Pay</button>
+        </form>
+    </section>
+    <footer>
+        <p class="copyright">&copy; 2023 - David LaRocco</p>
+    </footer>
 </body>
 </html>
