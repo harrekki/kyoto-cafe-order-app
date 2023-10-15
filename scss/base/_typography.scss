@@ -1,0 +1,18 @@
+@use '../util/' as u;
+
+body {
+    font-family: 'Hina Mincho', serif;
+    font-size: 16px;
+}
+
+button, input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: u.rem(39);
+}
+
+h2, h3 {
+    font-size: u.rem(28);
+} 
