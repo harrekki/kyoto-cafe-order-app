@@ -1,0 +1,39 @@
+@use '../util/' as u;
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: u.rem(30) 0;
+    border-bottom: 1px solid #D2D2D2;
+    
+    .menu-item__icon {
+        font-size: u.rem(78);
+        font-style: normal;
+    }
+
+    .menu-item__text {
+        margin-left: u.rem(30);
+
+        .item__ingredients {
+            color: var(--light-gray);
+        }
+
+        .item__price {
+            font-size: u.rem(20);
+        }
+    }
+
+    .add-btn {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        margin-left: auto;
+        border-radius: 50%;
+        background-color: inherit;
+        border: solid 1px #DEDEDE;
+        color: #3C3C3C;
+        font-size: u.rem(30);
+        text-align: center;
+        cursor: pointer;
+    }
+}

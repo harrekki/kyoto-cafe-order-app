@@ -11,12 +11,15 @@ header {
         center;
         
     background-size: cover;
-    color: whitesmoke;
-    text-shadow: 0 0 2px black;
+    
+    .title {
+        color: whitesmoke;
+        text-shadow: 0 0 1px black;
+    }
 
     p {
         font-size: u.rem(18);
-        width: 40%;
+        width: 33%;
         line-height: 80%;
     }
 }
