@@ -1,0 +1,62 @@
+@use '../util/' as u;
+
+.checkout {
+    margin-top: u.rem(45);
+
+    h2 {
+        text-align: center;
+        // font-weight: normal;
+    }
+
+    .checkout__order-con {
+        margin-top: u.rem(60);
+    }
+
+    .order__item {
+        display: flex;
+        align-items: center;
+        padding: u.rem(5) 0;
+
+        h3 {
+            font-weight: normal;
+        }
+
+        button {
+            margin-left: u.rem(10);
+            border: none;
+            padding: 0;
+            background-color: inherit;
+            color: #bbb;
+            font-size: u.rem(12);
+            cursor: pointer;
+        }
+
+        p {
+            margin-left: auto;
+            font-size: u.rem(20);
+        }
+    }
+
+    hr {
+        border: 1px solid #393333;
+        margin: u.rem(15) 0;
+    }
+
+    .checkout__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        .total-label {
+            font-size: u.rem(28);
+        }
+
+        .total-amt {
+            font-size: u.rem(20);
+        }
+    }
+
+    .checkout__complete-btn{
+        margin-top: u.rem(50);
+    }
+}
