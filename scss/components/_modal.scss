@@ -1,0 +1,40 @@
+@use '../util/' as u;
+
+.modal {
+    display: none;
+    background-color: white;
+    width: 90%;
+    max-height: u.rem(490);
+    margin: auto auto;
+    padding: u.rem(45) u.rem(25) u.rem(30);
+    border-radius: 4px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: 
+        drop-shadow(5px 5px 255px 
+      rgba(0, 0, 0, 0.50));
+
+    h2 {
+        text-align: center;
+    }
+
+    form {
+        margin-top: u.rem(45);
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(23);
+
+        input {
+            padding: u.rem(15) u.rem(25);
+            border: 1.5px solid #757575;
+            border-radius: 3px; 
+        }
+
+        button {
+            margin-top: u.rem(46);
+        }
+    }
+}
