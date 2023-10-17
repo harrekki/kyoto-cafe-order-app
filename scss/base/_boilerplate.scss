@@ -1,7 +1,7 @@
 @use '../util/' as u;
 
 body {
-    max-width: u.rem(600);
+    min-width: u.rem(375);
 }
 
 .container {

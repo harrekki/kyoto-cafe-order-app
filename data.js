@@ -29,4 +29,4 @@ export const menuArray = [
         price: 5,
         emoji: '🍙',
     }
-]
+];

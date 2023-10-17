@@ -1,11 +1,9 @@
 @use '../util/' as u;
 
 header {
-    width: 100%;
-    height: u.em(200);
-    padding: u.rem(40) u.rem(20);
+    padding: u.em(40) u.em(20) u.em(60);
     background:
-        black
+        var(--light-gray)
         url("../../images/mj-tangonan-CAUgg2lxRk0-unsplash.jpg")
         no-repeat
         center;
