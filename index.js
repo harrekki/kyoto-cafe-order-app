@@ -1,37 +1,27 @@
-import { menuArray } from './data.js'
+import { menuArray } from './scripts/data.js'
+import getMenuHtml from './scripts/getMenuHtml.js';
+import renderOrder from './scripts/renderOrder.js';
 
-console.log(menuArray)
+getMenuHtml(menuArray);
 
-const menuElem = document.getElementById("menu");
+let orderArray = [];
 
-function getMenuHtml() {
-    let menuHtml = ``;
+document.addEventListener('click', function(e) {
+    if(e.target.id === 'add-btn') {
+        addItemToOrder(e);
+    }
+});
 
-    menuArray.forEach(item => {
-        menuHtml += `
-            <article class="menu-item" data-id="${item.id}">
-                <i class="menu-item__icon">${item.emoji}</i>
-                <div class="menu-item__text">
-                    <h3 class="item__title">${item.name}</h3>
-                    <p class="item__ingredients">
-                        ${item.ingredients.join(' | ')}
-                    </p>
-                    <p class="item__price">$${item.price}</p>
-                </div>
-                <button 
-                    class="add-btn"
-                    aria-label="Add to order"
-                >
-                    +
-                </button>
-            </article>
-        `
-    })
-
-    return menuHtml;
+function addItemToOrder(e) {
+    const parentId = e.target.parentElement.dataset.id;
+    const menuItem = menuArray.filter(item => item.id === parentId)[0];
+    const {name, price} = menuItem;
+    orderArray.push(
+        {
+            orderId: orderArray.length,
+            name, 
+            price
+        }
+    );
+    renderOrder(orderArray);
 }
-
-
-menuElem.innerHTML = getMenuHtml();
-
-    

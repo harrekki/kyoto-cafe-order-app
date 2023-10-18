@@ -1,6 +1,7 @@
 @use '../util/' as u;
 
 .checkout {
+    display: none;
     margin-top: u.rem(45);
 
     h2 {

@@ -26,26 +26,17 @@
             <section class="menu" id="menu">
                 <h2 class="menu__title">Menu</h2>
             </section>
-            <section class="checkout">
+            <section class="checkout" id="checkout">
                 <h2 class="checkout__title">Your Order</h2>
-                <div class="checkout__order-con">
-                    <div class="order__item">
-                        <h3 class="order__item-name">Green Tea Latte</h3>
-                        <button class="order__remove-btn">remove</button>
-                        <p class="order__price">$7.95</p>
-                    </div>
-                    <div class="order__item">
-                        <h3 class="order__item-name">Green Tea Latte</h3>
-                        <button class="order__remove-btn">remove</button>
-                        <p class="order__price">$7.95</p>
-                    </div>
-                </div>
+                <div class="checkout__order-con" id="order-container"></div>
                 <hr class="checkout-hr">
                 <div class="checkout__total">
                     <p class="total-label">Total price: </p>
-                    <p class="total-amt">$15.90</p>    
+                    <p class="total-amt" id="total-amt"></p>    
                 </div>
-                <button class="btn checkout__complete-btn">Complete Order</button>
+                <button class="btn checkout__complete-btn">
+                    Complete Order
+                </button>
             </section>
         </main>
         <section class="modal">
