@@ -9,6 +9,8 @@ let orderArray = [];
 document.addEventListener('click', function(e) {
     if(e.target.id === 'add-btn') {
         addItemToOrder(e);
+    } else if(e.target.id === 'remove-btn') {
+        removeItemFromOrder(e);
     }
 });
 
@@ -18,10 +20,24 @@ function addItemToOrder(e) {
     const {name, price} = menuItem;
     orderArray.push(
         {
-            orderId: orderArray.length,
+            orderId: orderArray.length + 1,
             name, 
             price
         }
     );
     renderOrder(orderArray);
+}
+
+function removeItemFromOrder(e) {
+    const orderId = Number(e.target.parentElement.dataset.orderId);
+    let orderIndex;
+    orderArray.forEach((order, index) => {
+        if(orderId === order.orderId) {
+            orderIndex = index;
+        }
+    });
+
+    orderArray.splice(orderIndex, 1);
+    renderOrder(orderArray);
+    
 }
