@@ -13,6 +13,8 @@ document.addEventListener('click', function(e) {
         removeItemFromOrder(e);
     } else if(e.target.id === 'complete-btn') {
         displayModal();
+    } else if(e.target.id === 'pay-btn') {
+        acceptPayment(e);
     }
 });
 
@@ -46,4 +48,24 @@ function removeItemFromOrder(e) {
 function displayModal() {
     const modal = document.getElementById('modal');
     modal.style.display = "block";
+}
+
+function acceptPayment(e) {
+    e.preventDefault();
+    const orderCompleteDiv = document.getElementById('order-complete');
+    const modal = document.getElementById('modal');
+
+    const fullName = document.getElementById('full-name').value;
+    const firstName = fullName.split(' ')[0];
+
+    orderArray = [];
+    renderOrder(orderArray);
+    modal.style.display = "none";
+    
+    orderCompleteDiv.innerHTML = `
+        <p>
+            Thanks, ${firstName}! Your order is on its way!
+        </p>
+    `
+    
 }

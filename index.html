@@ -26,6 +26,9 @@
             <section class="menu" id="menu">
                 <h2 class="menu__title">Menu</h2>
             </section>
+
+            <div class="order-complete" id="order-complete"></div>
+
             <section class="checkout" id="checkout">
                 <h2 class="checkout__title">Your Order</h2>
                 <div class="checkout__order-con" id="order-container"></div>
@@ -44,20 +47,27 @@
         </main>
         <section class="modal" id="modal">
             <h2 class="modal__title">Enter card details</h2>
-            <form action="">
+            <form>
                 <input 
                     type="text" 
                     name="full-name" 
                     id="full-name" 
                     placeholder="Enter your full name" 
                     aria-label="Full name"
+                    required
+                    minlength="3"
                 />
                 <input 
-                    type="password" 
+                    type="text" 
                     name="cc-number" 
                     id="cc-number" 
                     placeholder="Enter card number" 
                     aria-label="Credit Card Number"
+                    required
+                    aria-required="true"
+                    pattern="[0-9]+"
+                    minlength="15"
+                    maxlength="16"
                 />
                 <input 
                     type="text" 
@@ -65,8 +75,19 @@
                     id="cvv-number"
                     placeholder="Enter CVV"
                     aria-label="CVV number"
+                    required
+                    aria-required="true"
+                    pattern="[0-9]+"
+                    minlength="3"
+                    maxlength="3"
                 />
-                <button class="btn pay-btn">Pay</button>
+                <button 
+                    type="submit"
+                    class="btn pay-btn" 
+                    id="pay-btn"
+                >
+                    Pay
+                </button>
             </form>
         </section>
     </div>
