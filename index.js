@@ -11,6 +11,8 @@ document.addEventListener('click', function(e) {
         addItemToOrder(e);
     } else if(e.target.id === 'remove-btn') {
         removeItemFromOrder(e);
+    } else if(e.target.id === 'complete-btn') {
+        displayModal();
     }
 });
 
@@ -39,5 +41,9 @@ function removeItemFromOrder(e) {
 
     orderArray.splice(orderIndex, 1);
     renderOrder(orderArray);
-    
+}
+
+function displayModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = "block";
 }
