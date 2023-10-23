@@ -9,4 +9,10 @@ button.btn {
     color: #fff;
     font-weight: 700;
     cursor: pointer;
+    transition: all ease-in-out 150ms;
+
+    &:hover, &:active {
+        background-color: #16db9983;
+        color: #3c3c3c;
+    }
 }

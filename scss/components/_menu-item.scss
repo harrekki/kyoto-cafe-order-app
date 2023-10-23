@@ -35,5 +35,10 @@
         font-size: u.rem(30);
         text-align: center;
         cursor: pointer;
+        transition: all ease-in-out 100ms;
+
+        &:hover, &:active {
+            background-color: #DEDEDE;
+        }
     }
 }

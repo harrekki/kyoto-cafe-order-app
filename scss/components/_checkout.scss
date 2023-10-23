@@ -30,6 +30,11 @@
             color: #bbb;
             font-size: u.rem(12);
             cursor: pointer;
+
+            &:hover, &:active {
+                color: #901e1e;
+                font-size: u.rem(13);
+            }
         }
 
         p {
